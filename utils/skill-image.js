@@ -77,10 +77,12 @@ import pandas from '../app/assets/svg/skills/pandas.svg';
 import scikitlearn from '../app/assets/svg/skills/scikit-learn.svg';
 import dotnet from '../app/assets/svg/skills/dotnet.svg';
 import dotnetcore from '../app/assets/svg/skills/dotnetcore.svg'
-import kubernetes from '../app/assets/svg/skills/kubernetes.svg'
 import linux from '../app/assets/svg/skills/linux.svg'
 import sqlalchemy from '../app/assets/svg/skills/sqlalchemy.svg'
 import fastapi from '../app/assets/svg/skills/fastapi.svg'
+import kubernetes from '../app/assets/svg/skills/kubernetes.svg'
+import spring from '../app/assets/svg/skills/spring.svg'
+
 
 
 
@@ -243,15 +245,18 @@ export const skillsImage = (skill) => {
       return dotnet;
     case '.net core':
       return dotnetcore
-    case 'kubernetes':
-      return kubernetes;
     case 'linux':
       return linux;
     case 'sqlalchemy':
       return sqlalchemy;
     case 'fastapi':
       return fastapi;
+    case 'spring boot':
+      return spring;
+    case 'kubernetes':
+      return kubernetes;
     default:
+      return null;
       break;
   }
 }
