@@ -10,5 +10,5 @@ export const personalData = {
   linkedIn: 'https://www.linkedin.com/in/roopan-raj-276906264/',
   leetcode: "https://leetcode.com/u/roopan582/",
   devUsername: "Roopan",
-  resume: "https://docs.google.com/document/d/1nlTpQIK4JcW8MZUk5UgDgLMhHa6wpKhgpCSE0Vdi8nU/edit?tab=t.0"
+  resume: "https://drive.google.com/file/d/1-pqn7SiTFQol2kBa9ObxRpRgcMnMU_Ok/view?usp=drive_link"
 }
