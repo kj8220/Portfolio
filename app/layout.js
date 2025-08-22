@@ -1,16 +1,17 @@
 // In app/layout.js
 
-import "./css/globals.scss";
+import { Inter } from "next/font/google";
+import "./css/globals.scss"; // We'll keep the global styles
 
-export const metadata = {
-  title: "Portfolio of Roopan Raj",
-  description: "This is the portfolio of Roopan Raj.",
-};
+const inter = Inter({ subsets: ["latin"] });
+
+// We'll add metadata back later, in page.js
+// export const metadata = { ... };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         {children}
       </body>
     </html>
