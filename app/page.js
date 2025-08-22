@@ -6,7 +6,7 @@ import ContactSection from "./components/homepage/contact";
 import Education from "./components/homepage/education";
 import Experience from "./components/homepage/experience";
 import HeroSection from "./components/homepage/hero-section";
-import Projects from "./components/homepage/projects";
+//import Projects from "./components/homepage/projects";
 // import Skills from "./components/homepage/skills"; // <-- Keep this commented out
 
 export const metadata = {
@@ -26,7 +26,7 @@ export default async function Home() {
       <AboutSection />
       <Experience />
       {/* <Skills /> */} {/* <-- Keep this commented out */}
-      <Projects />
+      {/* <Projects />*/}
       <Education />
       <ContactSection />
     </div>
