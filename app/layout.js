@@ -1,19 +1,30 @@
+// In app/layout.js
+
+"use client"; // STEP 1: Make the layout a client component
+
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
+import dynamic from "next/dynamic"; // STEP 2: Import dynamic
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/footer";
-import ScrollToTop from "./components/helper/scroll-to-top";
 import Navbar from "./components/navbar";
+// STEP 3: Remove the old static import
+// import ScrollToTop from "./components/helper/scroll-to-top";
 import "./css/card.scss";
 import "./css/globals.scss";
+
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Portfolio of Roopan Raj - Software Developer",
-  description:
-    "This is the portfolio of Roopan Raj. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
-};
+// STEP 4: Dynamically import the client-only component
+const ScrollToTop = dynamic(
+  () => import("./components/helper/scroll-to-top"),
+  { ssr: false }
+);
+
+// We can no longer export metadata from a Client Component layout.
+// Move the metadata object to your app/page.js file.
+// export const metadata = { ... };
 
 export default function RootLayout({ children }) {
   return (
@@ -23,11 +34,11 @@ export default function RootLayout({ children }) {
         <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
           <Navbar />
           {children}
-          <ScrollToTop />
+          <ScrollToTop /> {/* This will now work correctly */}
         </main>
         <Footer />
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
       </body>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
     </html>
   );
 }
