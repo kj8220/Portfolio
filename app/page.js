@@ -7,7 +7,7 @@ import ContactSection from "./components/homepage/contact";
 //import Experience from "./components/homepage/experience";
 import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
-// import Skills from "./components/homepage/skills"; // <-- Keep this commented out
+import Skills from "./components/homepage/skills"; // <-- Keep this commented out
 
 export const metadata = {
   title: "Portfolio of Roopan Raj - Software Developer",
@@ -25,7 +25,7 @@ export default async function Home() {
       <HeroSection />
       <AboutSection />
      {/*  <Experience />*/}
-     {/*  <Skills />  */}
+       <Skills />  
       <Projects />
      {/* <Education /> */}
       <ContactSection />
