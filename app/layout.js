@@ -3,7 +3,7 @@
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
-import Footer from "./components/footer";
+//import Footer from "./components/footer";
 //import Navbar from "./components/navbar";
 import Providers from "./providers"; // Import the new Providers component
 import "./css/card.scss";
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
             {children}
             <ScrollToTop />
           </main>
-          <Footer />
+          {/*<Footer />*/}
         </Providers>
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
       </body>
