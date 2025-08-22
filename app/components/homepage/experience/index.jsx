@@ -1,4 +1,6 @@
 // @flow strict
+"use client"; // <-- Add this line at the very top
+
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
